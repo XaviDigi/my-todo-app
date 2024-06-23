@@ -9,9 +9,9 @@ def add_todo():
 
 todos = functions.get_todos()
 
-st.title("My Todo App")
-st.subheader("This is pretty cool")
-st.write("Nice")
+st.title("Hey! You probably came from my Portfolio")
+st.subheader("Thanks for stopping by (please hireme)")
+st.write("So write something here and click it to delete it. You can always refresh it will still be here. ")
 
 for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
@@ -21,5 +21,5 @@ for index, todo in enumerate(todos):
         del st.session_state[todo]
         st.experimental_rerun()
 
-st.text_input(label="Enter a Todo", placeholder="Add a new todo...",
+st.text_input(label="Express thyself", placeholder="Just do it!",
               on_change=add_todo, key="new_todo")
